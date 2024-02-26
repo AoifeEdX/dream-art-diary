@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css?family=Caveat');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  padding: 0;
+  background: linen;
+}
+
+.paper {
+  position: absolute;
+  height: 550px;
+  width: 450px;
+  background: white;
+  margin: -275px -225px;
+  left: 50%;
+  top: 50%;
+  box-shadow: 0px 0px 5px 0px #888;
+}
+
+.paper::before {
+  content: '';
+  position: absolute;
+  left: 45px;
+  height: 100%;
+  width: 2px;
+  background: rgba(255, 0, 0, 0.4);
+}
+
+.lines {
+  margin-top: 40px;
+  height: calc(100% - 40px);
+  width: 100%;
+  background-image: repeating-linear-gradient(white 0px, white 24px, steelblue 25px);
+}
+
+.text {
+  position: absolute;
+  top: 65px;
+  left: 55px;
+  bottom: 10px;
+  right: 10px;
+  line-height: 25px;
+  font-family: 'Caveat', cursive;
+  overflow: hidden;
+  outline: none;
+  color: black;
+}
+
+.heading {
+  position: absolute;
+  top: 15px;
+  left: 55px;
+  font-size: 20px;
+	font-family: 'Caveat', cursive;
+  overflow: hidden;
+  outline: none;
+  color: black;
+}
+
+.holes {
+  position: absolute;
+  left: 10px;
+  height: 20px;
+  width: 20px;
+  background: linen;
+  border-radius: 50%;
+  box-shadow: inset 0px 0px 2px 0px #888;
+}
+
+.hole-top {
+  top: 10%;
+}
+
+.hole-middle {
+  top: 50%;
+}
+
+.hole-bottom {
+  bottom: 10%;
+}
+
+.interpretation-button {
+  position: absolute;
+  bottom: 27px;
+  right: -50px;
+  font-size: 20px;
+  transform: translateX(-50%);
+  padding: 5px;
+  background-color: transparent; 
+  font-family: 'Caveat', cursive;
+  border: none;
+  cursor: pointer;
+  color: red;
+  z-index: 1;
+  transition: transform 0.3s ease;
+}
+
+.interpretation-button:hover {
+  transform: translateX(-50%) scale(1.05); /* Apply slight scaling on hover */
+}
+
+.interpretation-button::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: red;
+  z-index: -1;
+  opacity: 0;
+  transition: width 0.3s ease, opacity 0.3s ease; 
+}
+
+.interpretation-button:hover::before {
+  width: 145px; 
+  opacity: 1;
+}
