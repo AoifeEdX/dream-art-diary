@@ -7,7 +7,7 @@ In the distance, I saw a figure cloaked in mist, beckoning me forward with a gen
 As dawn broke and the dream faded, I awoke with a sense of wonder and curiosity, eager to explore the depths of my subconscious once more.`;
 
   const handleInterpretation = () => {
-    // Add your dream interpretation function here
+    // TODO: Add dream interpretation function
     console.log("Initiating dream interpretation...");
   };
 
